@@ -160,9 +160,6 @@
 		04C4CA8F268508D300266932 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CA8E268508D300266932 /* HomeViewController.swift */; };
 		04C4CA91268509B900266932 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CA90268509B900266932 /* FavoriteViewController.swift */; };
 		04C4CA93268509C600266932 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CA92268509C600266932 /* MoreViewController.swift */; };
-		04C4CD1F26850E7400266932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD1E26850E7400266932 /* Assets.xcassets */; };
-		04C4CD2026850E7400266932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD1E26850E7400266932 /* Assets.xcassets */; };
-		04C4CD2126850E7400266932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD1E26850E7400266932 /* Assets.xcassets */; };
 		04C4CD23268510AC00266932 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD22268510AC00266932 /* Sound.swift */; };
 		04C4CD24268510AC00266932 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD22268510AC00266932 /* Sound.swift */; };
 		04C4CD25268510AC00266932 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD22268510AC00266932 /* Sound.swift */; };
@@ -172,9 +169,6 @@
 		04C4CD2B2685130900266932 /* whitenoise-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD2A2685130900266932 /* whitenoise-data.plist */; };
 		04C4CD2C2685130900266932 /* whitenoise-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD2A2685130900266932 /* whitenoise-data.plist */; };
 		04C4CD2D2685130900266932 /* whitenoise-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD2A2685130900266932 /* whitenoise-data.plist */; };
-		04C4CD2F2685138500266932 /* heathysleep-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD2E2685138500266932 /* heathysleep-data.plist */; };
-		04C4CD302685138500266932 /* heathysleep-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD2E2685138500266932 /* heathysleep-data.plist */; };
-		04C4CD312685138500266932 /* heathysleep-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CD2E2685138500266932 /* heathysleep-data.plist */; };
 		04C4CD33268515FE00266932 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD32268515FE00266932 /* CategoryViewCell.swift */; };
 		04C4CD382685173700266932 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD372685173700266932 /* UIView.swift */; };
 		04C4CD392685173700266932 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD372685173700266932 /* UIView.swift */; };
@@ -185,6 +179,30 @@
 		04C4CD4226859B4900266932 /* SoundViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD4126859B4900266932 /* SoundViewCell.swift */; };
 		04C4CD4426859D3D00266932 /* SoundCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD4326859D3D00266932 /* SoundCollectionViewController.swift */; };
 		04C4CD462685A4A900266932 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CD452685A4A900266932 /* SoundViewController.swift */; };
+		04CB5A7E268B551E0094902D /* heathysleep-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A7D268B551E0094902D /* heathysleep-data.plist */; };
+		04CB5A98268B55F40094902D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A82268B55F40094902D /* Roboto-Medium.ttf */; };
+		04CB5A99268B55F40094902D /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A83268B55F40094902D /* Montserrat-Medium.ttf */; };
+		04CB5A9A268B55F40094902D /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A84268B55F40094902D /* SF-Pro-Text-Heavy.otf */; };
+		04CB5A9B268B55F40094902D /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A85268B55F40094902D /* Lato-Bold.ttf */; };
+		04CB5A9C268B55F40094902D /* Caveat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A86268B55F40094902D /* Caveat-Bold.ttf */; };
+		04CB5A9D268B55F40094902D /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A87268B55F40094902D /* SF-Pro-Display-Bold.otf */; };
+		04CB5A9E268B55F40094902D /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A88268B55F40094902D /* SF-Pro-Display-Medium.otf */; };
+		04CB5A9F268B55F40094902D /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A89268B55F40094902D /* Montserrat-Light.ttf */; };
+		04CB5AA0268B55F40094902D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A8A268B55F40094902D /* Lato-Regular.ttf */; };
+		04CB5AA1268B55F40094902D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A8B268B55F40094902D /* Montserrat-Bold.ttf */; };
+		04CB5AA2268B55F40094902D /* SourceCodePro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A8C268B55F40094902D /* SourceCodePro-Semibold.otf */; };
+		04CB5AA3268B55F40094902D /* InkBandits_Sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A8D268B55F40094902D /* InkBandits_Sans.otf */; };
+		04CB5AA4268B55F40094902D /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A8E268B55F40094902D /* SF-Pro-Text-Regular.otf */; };
+		04CB5AA5268B55F40094902D /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A8F268B55F40094902D /* Montserrat-SemiBold.ttf */; };
+		04CB5AA6268B55F40094902D /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A90268B55F40094902D /* SF-Pro-Text-Bold.otf */; };
+		04CB5AA7268B55F40094902D /* Bellota-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A91268B55F40094902D /* Bellota-Bold.otf */; };
+		04CB5AA8268B55F40094902D /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A92268B55F40094902D /* Montserrat-ExtraBold.otf */; };
+		04CB5AA9268B55F40094902D /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A93268B55F40094902D /* Montserrat-Regular.ttf */; };
+		04CB5AAA268B55F40094902D /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A94268B55F40094902D /* Montserrat-Black.otf */; };
+		04CB5AAB268B55F40094902D /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A95268B55F40094902D /* SF-Pro-Text-Semibold.otf */; };
+		04CB5AAC268B55F40094902D /* InkBandits-Sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A96268B55F40094902D /* InkBandits-Sans.otf */; };
+		04CB5AAD268B55F40094902D /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5A97268B55F40094902D /* SF-UI-Text-Medium.otf */; };
+		04CB5AAF268B56830094902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CB5AAE268B56830094902D /* Assets.xcassets */; };
 		78AD3B8E3041599C9F670058 /* Pods_healthysleepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5098FAF722EBA4AC00D2681 /* Pods_healthysleepTests.framework */; };
 		AABB1EE68AC951AD02161A0A /* Pods_healthysleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6733C890E6B8BE5D79ADD65 /* Pods_healthysleep.framework */; };
 		ABAF1C60F4F5951D1FE7C4F9 /* Pods_healthysleep_healthysleepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E23A740C5CFF98975F699DC /* Pods_healthysleep_healthysleepUITests.framework */; };
@@ -365,11 +383,9 @@
 		04C4CA8E268508D300266932 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04C4CA90268509B900266932 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		04C4CA92268509C600266932 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		04C4CD1E26850E7400266932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../sleeptot/Assets.xcassets; sourceTree = "<group>"; };
 		04C4CD22268510AC00266932 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		04C4CD26268510C800266932 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		04C4CD2A2685130900266932 /* whitenoise-data.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "whitenoise-data.plist"; sourceTree = "<group>"; };
-		04C4CD2E2685138500266932 /* heathysleep-data.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = "heathysleep-data.plist"; path = "../../../../../Sleeptot 1.3.9/Payload/Sleeptot.app/heathysleep-data.plist"; sourceTree = "<group>"; };
 		04C4CD32268515FE00266932 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		04C4CD372685173700266932 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		04C4CD3B26857CB100266932 /* DurationValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationValue.swift; sourceTree = "<group>"; };
@@ -378,6 +394,30 @@
 		04C4CD4126859B4900266932 /* SoundViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewCell.swift; sourceTree = "<group>"; };
 		04C4CD4326859D3D00266932 /* SoundCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCollectionViewController.swift; sourceTree = "<group>"; };
 		04C4CD452685A4A900266932 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		04CB5A7D268B551E0094902D /* heathysleep-data.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "heathysleep-data.plist"; sourceTree = "<group>"; };
+		04CB5A82268B55F40094902D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		04CB5A83268B55F40094902D /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		04CB5A84268B55F40094902D /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		04CB5A85268B55F40094902D /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		04CB5A86268B55F40094902D /* Caveat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caveat-Bold.ttf"; sourceTree = "<group>"; };
+		04CB5A87268B55F40094902D /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		04CB5A88268B55F40094902D /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		04CB5A89268B55F40094902D /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		04CB5A8A268B55F40094902D /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		04CB5A8B268B55F40094902D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		04CB5A8C268B55F40094902D /* SourceCodePro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Semibold.otf"; sourceTree = "<group>"; };
+		04CB5A8D268B55F40094902D /* InkBandits_Sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InkBandits_Sans.otf; sourceTree = "<group>"; };
+		04CB5A8E268B55F40094902D /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		04CB5A8F268B55F40094902D /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		04CB5A90268B55F40094902D /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		04CB5A91268B55F40094902D /* Bellota-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bellota-Bold.otf"; sourceTree = "<group>"; };
+		04CB5A92268B55F40094902D /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		04CB5A93268B55F40094902D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		04CB5A94268B55F40094902D /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		04CB5A95268B55F40094902D /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		04CB5A96268B55F40094902D /* InkBandits-Sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InkBandits-Sans.otf"; sourceTree = "<group>"; };
+		04CB5A97268B55F40094902D /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
+		04CB5AAE268B56830094902D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E23A740C5CFF98975F699DC /* Pods_healthysleep_healthysleepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_healthysleep_healthysleepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		213529B60D3C1F41665ABF1C /* Pods-healthysleep-healthysleepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healthysleep-healthysleepUITests.debug.xcconfig"; path = "Target Support Files/Pods-healthysleep-healthysleepUITests/Pods-healthysleep-healthysleepUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5392D1594CB58C0789083FD5 /* Pods-healthysleepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healthysleepTests.release.xcconfig"; path = "Target Support Files/Pods-healthysleepTests/Pods-healthysleepTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -513,12 +553,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		048F681126886EF70033A30F /* Presents */ = {
+		048F681126886EF70033A30F /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				048F681226886F670033A30F /* PlaybackPresenter.swift */,
 			);
-			path = Presents;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		048F6852268932BD0033A30F /* sounds */ = {
@@ -658,7 +698,7 @@
 		04C4CA542685070D00266932 /* healthysleep */ = {
 			isa = PBXGroup;
 			children = (
-				048F681126886EF70033A30F /* Presents */,
+				048F681126886EF70033A30F /* Presenters */,
 				048F680126881FC20033A30F /* Lib */,
 				04C4CA882685075F00266932 /* Resouces */,
 				04C4CA552685070D00266932 /* AppDelegate.swift */,
@@ -694,10 +734,11 @@
 		04C4CA882685075F00266932 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				04CB5AAE268B56830094902D /* Assets.xcassets */,
+				04CB5A81268B55F40094902D /* fonts */,
 				048F689D268933980033A30F /* images */,
 				048F6852268932BD0033A30F /* sounds */,
 				048F682626890FBB0033A30F /* playing_anim_st.json */,
-				04C4CD1E26850E7400266932 /* Assets.xcassets */,
 				04C4CCD326850B7D00266932 /* plists */,
 			);
 			path = Resouces;
@@ -765,7 +806,7 @@
 		04C4CCD326850B7D00266932 /* plists */ = {
 			isa = PBXGroup;
 			children = (
-				04C4CD2E2685138500266932 /* heathysleep-data.plist */,
+				04CB5A7D268B551E0094902D /* heathysleep-data.plist */,
 				04C4CD2A2685130900266932 /* whitenoise-data.plist */,
 			);
 			path = plists;
@@ -779,6 +820,35 @@
 				04C4CD372685173700266932 /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04CB5A81268B55F40094902D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04CB5A82268B55F40094902D /* Roboto-Medium.ttf */,
+				04CB5A83268B55F40094902D /* Montserrat-Medium.ttf */,
+				04CB5A84268B55F40094902D /* SF-Pro-Text-Heavy.otf */,
+				04CB5A85268B55F40094902D /* Lato-Bold.ttf */,
+				04CB5A86268B55F40094902D /* Caveat-Bold.ttf */,
+				04CB5A87268B55F40094902D /* SF-Pro-Display-Bold.otf */,
+				04CB5A88268B55F40094902D /* SF-Pro-Display-Medium.otf */,
+				04CB5A89268B55F40094902D /* Montserrat-Light.ttf */,
+				04CB5A8A268B55F40094902D /* Lato-Regular.ttf */,
+				04CB5A8B268B55F40094902D /* Montserrat-Bold.ttf */,
+				04CB5A8C268B55F40094902D /* SourceCodePro-Semibold.otf */,
+				04CB5A8D268B55F40094902D /* InkBandits_Sans.otf */,
+				04CB5A8E268B55F40094902D /* SF-Pro-Text-Regular.otf */,
+				04CB5A8F268B55F40094902D /* Montserrat-SemiBold.ttf */,
+				04CB5A90268B55F40094902D /* SF-Pro-Text-Bold.otf */,
+				04CB5A91268B55F40094902D /* Bellota-Bold.otf */,
+				04CB5A92268B55F40094902D /* Montserrat-ExtraBold.otf */,
+				04CB5A93268B55F40094902D /* Montserrat-Regular.ttf */,
+				04CB5A94268B55F40094902D /* Montserrat-Black.otf */,
+				04CB5A95268B55F40094902D /* SF-Pro-Text-Semibold.otf */,
+				04CB5A96268B55F40094902D /* InkBandits-Sans.otf */,
+				04CB5A97268B55F40094902D /* SF-UI-Text-Medium.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		B6ED881AB413287B5877A61E /* Pods */ = {
@@ -913,8 +983,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				048F68FF268934040033A30F /* crackling_fire.jpg in Resources */,
-				04C4CD2F2685138500266932 /* heathysleep-data.plist in Resources */,
 				048F68F1268934040033A30F /* brown_noise.jpg in Resources */,
+				04CB5AA9268B55F40094902D /* Montserrat-Regular.ttf in Resources */,
 				048F68DF268934040033A30F /* vacuum.jpg in Resources */,
 				048F68F3268934040033A30F /* train_vibes.jpg in Resources */,
 				048F68DA268934040033A30F /* stormy_nights.jpg in Resources */,
@@ -933,9 +1003,12 @@
 				048F688D268932F60033A30F /* pink_noise_loop.m4a in Resources */,
 				048F68A7268933DF0033A30F /* beneath_ocean.jpg in Resources */,
 				048F6888268932F60033A30F /* shh_long_loop.m4a in Resources */,
+				04CB5A98268B55F40094902D /* Roboto-Medium.ttf in Resources */,
 				048F6911268934130033A30F /* white_noise.jpg in Resources */,
 				048F6901268934040033A30F /* upgrade_img_3.jpg in Resources */,
 				048F68E1268934040033A30F /* lullaby_5.jpg in Resources */,
+				04CB5AAF268B56830094902D /* Assets.xcassets in Resources */,
+				04CB5A9E268B55F40094902D /* SF-Pro-Display-Medium.otf in Resources */,
 				048F68F0268934040033A30F /* newborn.jpg in Resources */,
 				048F6857268932DC0033A30F /* white_noise_loop.m4a in Resources */,
 				048F68FA268934040033A30F /* nighttime_ambience.jpg in Resources */,
@@ -943,6 +1016,7 @@
 				048F6906268934040033A30F /* ST_tell_friend_insty.jpg in Resources */,
 				048F68D8268934040033A30F /* seashore_sleeps.jpg in Resources */,
 				048F6886268932F60033A30F /* train_loop.m4a in Resources */,
+				04CB5AAC268B55F40094902D /* InkBandits-Sans.otf in Resources */,
 				048F68E3268934040033A30F /* heartbeat.jpg in Resources */,
 				048F68A5268933DF0033A30F /* amp_anytime.jpg in Resources */,
 				048F6895268932F60033A30F /* jungle_loop.m4a in Resources */,
@@ -950,8 +1024,12 @@
 				048F68F8268934040033A30F /* calming_waves.jpg in Resources */,
 				048F68FB268934040033A30F /* fan.jpg in Resources */,
 				048F68E9268934040033A30F /* summer_waterfall.jpg in Resources */,
+				04CB5A99268B55F40094902D /* Montserrat-Medium.ttf in Resources */,
+				04CB5AAB268B55F40094902D /* SF-Pro-Text-Semibold.otf in Resources */,
+				04CB5A9A268B55F40094902D /* SF-Pro-Text-Heavy.otf in Resources */,
 				048F6890268932F60033A30F /* residential_nighttime_ambience_loop.m4a in Resources */,
 				048F68DD268934040033A30F /* upgrade_img_4.jpg in Resources */,
+				04CB5A9F268B55F40094902D /* Montserrat-Light.ttf in Resources */,
 				048F6859268932DC0033A30F /* womb_loop.m4a in Resources */,
 				048F6883268932F60033A30F /* lullaby_4_loop.m4a in Resources */,
 				048F689A268932FD0033A30F /* brown_noise_loop.m4a in Resources */,
@@ -960,9 +1038,9 @@
 				048F6858268932DC0033A30F /* waterfall.m4a in Resources */,
 				048F688C268932F60033A30F /* river_ambience_loop.m4a in Resources */,
 				048F68E2268934040033A30F /* shh.jpg in Resources */,
-				04C4CD1F26850E7400266932 /* Assets.xcassets in Resources */,
 				048F68D9268934040033A30F /* calming_campfire.jpg in Resources */,
 				048F68EF268934040033A30F /* subscribe_top_X.jpg in Resources */,
+				04CB5AA3268B55F40094902D /* InkBandits_Sans.otf in Resources */,
 				048F6904268934040033A30F /* no_sad_st.jpg in Resources */,
 				048F685A268932DC0033A30F /* wood_fire_loop.m4a in Resources */,
 				048F68FD268934040033A30F /* roaring_river.jpg in Resources */,
@@ -975,11 +1053,14 @@
 				048F688A268932F60033A30F /* car_ride_start.m4a in Resources */,
 				048F6892268932F60033A30F /* fountain_loop.m4a in Resources */,
 				048F6891268932F60033A30F /* vacuum_start.m4a in Resources */,
+				04CB5A7E268B551E0094902D /* heathysleep-data.plist in Resources */,
 				048F688B268932F60033A30F /* lullaby_2_loop.m4a in Resources */,
+				04CB5AA8268B55F40094902D /* Montserrat-ExtraBold.otf in Resources */,
 				048F68EE268934040033A30F /* rippling_raindrops.jpg in Resources */,
 				048F687E268932F60033A30F /* underwater.m4a in Resources */,
 				048F68F9268934040033A30F /* lullaby_6.jpg in Resources */,
 				048F68EA268934040033A30F /* happy_st.jpg in Resources */,
+				04CB5AAA268B55F40094902D /* Montserrat-Black.otf in Resources */,
 				048F6903268934040033A30F /* tweet_tweet.jpg in Resources */,
 				048F68E4268934040033A30F /* lullaby_3.jpg in Resources */,
 				048F68FE268934040033A30F /* subscribe_top.jpg in Resources */,
@@ -990,28 +1071,39 @@
 				048F6893268932F60033A30F /* lawnmower.m4a in Resources */,
 				048F68E5268934040033A30F /* flying_high.jpg in Resources */,
 				048F690B2689340C0033A30F /* sleeptot_amp_vid2.mp4 in Resources */,
+				04CB5A9D268B55F40094902D /* SF-Pro-Display-Bold.otf in Resources */,
 				048F68F4268934040033A30F /* upgrade_img_1.jpg in Resources */,
 				048F6907268934040033A30F /* pink_noise.jpg in Resources */,
 				048F6885268932F60033A30F /* heartbeat_loop.m4a in Resources */,
+				04CB5AA0268B55F40094902D /* Lato-Regular.ttf in Resources */,
+				04CB5AA5268B55F40094902D /* Montserrat-SemiBold.ttf in Resources */,
 				048F68F6268934040033A30F /* lullabies.jpg in Resources */,
+				04CB5AA1268B55F40094902D /* Montserrat-Bold.ttf in Resources */,
 				048F6902268934040033A30F /* trickling_fountain.jpg in Resources */,
 				048F68DE268934040033A30F /* infants.jpg in Resources */,
+				04CB5AAD268B55F40094902D /* SF-UI-Text-Medium.otf in Resources */,
+				04CB5AA6268B55F40094902D /* SF-Pro-Text-Bold.otf in Resources */,
 				048F68EB268934040033A30F /* lawnmower.jpg in Resources */,
 				048F68A3268933DF0033A30F /* amp_drift_asleep.jpg in Resources */,
 				048F6889268932F60033A30F /* washing_machine_loop.m4a in Resources */,
 				04C4CA652685070E00266932 /* LaunchScreen.storyboard in Resources */,
+				04CB5A9B268B55F40094902D /* Lato-Bold.ttf in Resources */,
 				048F68E7268934040033A30F /* car_ride.jpg in Resources */,
 				048F6894268932F60033A30F /* vacuum_loop.m4a in Resources */,
 				048F687A268932F60033A30F /* gentle_waves_loop.m4a in Resources */,
 				048F690F268934130033A30F /* womb.jpg in Resources */,
+				04CB5AA4268B55F40094902D /* SF-Pro-Text-Regular.otf in Resources */,
 				048F68F2268934040033A30F /* ST_tell_friend_fb.jpg in Resources */,
+				04CB5A9C268B55F40094902D /* Caveat-Bold.ttf in Resources */,
 				048F68E0268934040033A30F /* todo.jpg in Resources */,
 				048F688E268932F60033A30F /* thunder_storm_loop.m4a in Resources */,
 				048F6881268932F60033A30F /* morning_park_ambience_loop.m4a in Resources */,
+				04CB5AA2268B55F40094902D /* SourceCodePro-Semibold.otf in Resources */,
 				048F687F268932F60033A30F /* car_ride_loop.m4a in Resources */,
 				048F68DB268934040033A30F /* jungle_vibes.jpg in Resources */,
 				048F68E8268934040033A30F /* parents.jpg in Resources */,
 				048F688F268932F60033A30F /* lullaby_6_harp_loop.m4a in Resources */,
+				04CB5AA7268B55F40094902D /* Bellota-Bold.otf in Resources */,
 				048F6880268932F60033A30F /* lullaby_3_loop.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1021,8 +1113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C4CD2C2685130900266932 /* whitenoise-data.plist in Resources */,
-				04C4CD302685138500266932 /* heathysleep-data.plist in Resources */,
-				04C4CD2026850E7400266932 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,8 +1121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C4CD2D2685130900266932 /* whitenoise-data.plist in Resources */,
-				04C4CD312685138500266932 /* heathysleep-data.plist in Resources */,
-				04C4CD2126850E7400266932 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
