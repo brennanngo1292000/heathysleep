@@ -8,11 +8,11 @@
 import UIKit
 
 protocol FavoriteButtonViewDelegate {
-    func didTapFavoriteButton(_ view: FavoriteButtonView, fromValue: Bool)
+    func didTapFavoriteButton(_ view: FavoriteButtonView, completion: ((Bool) -> Void)?)
 }
 
 class FavoriteButtonView: UIView {
-
+    
     var delegate: FavoriteButtonViewDelegate?
     
     private var favoriteButton: UIButton = {
@@ -40,12 +40,17 @@ class FavoriteButtonView: UIView {
     }
     
     func updateUIWith(state: PlaybackState, changed: [PSField]) {
-        
+        let image: UIImage?
+        if state.isFavorites {
+            image = UIImage(systemName: "heart.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        } else {
+            image = UIImage(systemName: "heart", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        }
+        favoriteButton.setImage(image, for: .normal)
     }
     
     @objc func didTapFavoriteButton() {
-        delegate?.didTapFavoriteButton(self, fromValue: false)
+        delegate?.didTapFavoriteButton(self, completion: nil)
     }
-
 
 }

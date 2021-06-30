@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 final class SoundViewModel {
     
     var state: PlaybackState {
@@ -35,21 +33,21 @@ final class SoundViewModel {
         PlaybackPresenter.shared.changeVolume(value: value, completion: completion)
     }
     
-    func changeDuration (value: DurationValue, completion :((Bool) -> Void)?) {
+    func changeDuration (value: DurationValue, completion:((Bool) -> Void)?) {
         self.stop(completion: { _ in })
         PlaybackPresenter.shared.changeDuration(value: value, completion: completion)
     }
     
-    func toggleFavorite (from: Bool, completion: ((Bool) -> Void)?) {
-        guard let nameKey = PlaybackPresenter.shared.state.sound?.name_key else {
-            completion?(false)
-            return
-        }
-        if from {
-            FavoriteSounds.shared.delete(nameKey: nameKey, completion: completion )
-        } else {
-            FavoriteSounds.shared.add(nameKey: nameKey, completion: completion)
-        }
+    func changeFadeOut(value: FadeValue, completion:((Bool) -> Void)?) {
+        PlaybackPresenter.shared.changeFade(value: value, completion: completion)
+    }
+    
+    func changeAlarm(value: Date, completion:((Bool) -> Void)?) {
+        PlaybackPresenter.shared.changeAlarm(value: value, completion: completion)
+    }
+    
+    func toggleFavorite (completion: ((Bool) -> Void)?) {
+        PlaybackPresenter.shared.toggleFavorite(completion: completion)
     }
     
     func on(_ observer: Any, selector: Selector) {

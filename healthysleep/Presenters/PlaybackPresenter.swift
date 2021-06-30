@@ -28,16 +28,26 @@ enum PSField {
     case progressionTo
     case percentage
     case alarm
+    case isFavorites
 }
 
 class PlaybackState {
     var sound: Sound?
-    var fadeOut = FadeValue(display: "30s", seconds: 30)
+    var fadeOut = FadeValue(display: " 0s", seconds: 0)
     var duration = DurationValue(display: "30s", seconds: 30)
     var state: AudioPlayerState = .buffering
-    var progressionTo: Float = 30
-    var percentage: Float = 30
+    var progressionTo: Float = 0
+    var percentage: Float = 0
     var alarm: Date?
+    var isFavorites: Bool {
+        guard let sound = self.sound else {
+            return false
+        }
+        return FavoriteSounds.shared.has(with: sound)
+    }
+    var timeRemaining: Float {
+        return duration.seconds - progressionTo
+    }
     
     init() {
         
@@ -68,7 +78,7 @@ final class PlaybackPresenter {
         if state.sound?.name_key != sound?.name_key {
             state.sound = sound
             player?.stop()
-            emit(playbackNotfication: .All, state: state, changed: [.sound, .fadeOut, .duration, .percentage, .progressionTo, .state])
+            emit(playbackNotfication: .All, state: state, changed: [.sound, .fadeOut, .duration, .percentage, .progressionTo, .state, .isFavorites])
         }
         
     }
@@ -80,14 +90,21 @@ final class PlaybackPresenter {
         }
     }
     
+    private func createPlayerItem () -> AudioItem? {
+        guard let url = Bundle.main.url(forResource: state.sound?.audio_loop, withExtension: "m4a") else { return nil}
+        guard let item = AudioItem(mediumQualitySoundURL: url) else { return nil}
+        return item
+    }
+    
     public func play (completion: ((Bool) -> Void)?) {
         
         /// create player
         createPlayer()
         
         /// create audio item and start playing
-        guard let url = Bundle.main.url(forResource: state.sound?.audio_loop, withExtension: "m4a") else { return }
-        guard let item = AudioItem(mediumQualitySoundURL: url) else { return }
+        guard let item = createPlayerItem() else {
+            return
+        }
         player?.play(item: item)
     }
     
@@ -135,6 +152,30 @@ final class PlaybackPresenter {
         completion?(true)
     }
     
+    public func changeAlarm(value: Date, completion: ((Bool) -> Void)?) {
+        self.state.alarm = value
+        self.emit(playbackNotfication: .All, state: state, changed: [.alarm])
+        completion?(true)
+    }
+    
+    public func toggleFavorite (completion: ((Bool) -> Void)?) {
+        guard let nameKey = state.sound?.name_key else {
+            completion?(false)
+            return
+        }
+        if state.isFavorites {
+            FavoriteSounds.shared.delete(nameKey: nameKey, completion: completion)
+        } else {
+            FavoriteSounds.shared.add(nameKey: nameKey, completion: completion)
+        }
+        completion?(true)
+        emit(playbackNotfication: .All, state: state, changed: [.isFavorites])
+    }
+    
+    func on(_ observer: Any, selector: Selector) {
+        PlaybackPresenter.shared.on(observer, selector: selector, playbackNotfication: .All)
+    }
+    
     private func emit(playbackNotfication: PlaybackPresenterNotification, state: PlaybackState, changed: [PSField]) {
         if changed.contains(.state) {
             NotificationCenter.default.post(name: PlaybackPresenterNotification.State.name, object: self, userInfo: ["state": state, "changed": changed])
@@ -173,6 +214,11 @@ extension PlaybackPresenter: AudioPlayerDelegate {
     func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float) {
         self.state.progressionTo = time.toSeconds()
         self.state.percentage = percentageRead
+        ///reset
+        if percentageRead >= 99 {
+            state.percentage = 0
+            state.progressionTo = 0
+        }
         emit(playbackNotfication: .All, state: self.state, changed: [.percentage, .progressionTo])
     }
     

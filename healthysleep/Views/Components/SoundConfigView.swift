@@ -8,11 +8,15 @@
 import UIKit
 
 protocol SoundConfigViewDelegate {
-    func didTapAlarmButton(_ configView: SoundConfigView)
+    func didTapAlarmButton(_ configView: SoundConfigView, alert: UIAlertController)
     
-    func didTapFadeButton(_ configView: SoundConfigView)
+    func didTapFadeButton(_ configView: SoundConfigView, alert: UIAlertController)
     
-    func didTapFavoriteButton(_ configView: SoundConfigView, from: Bool)
+    func didTapFavoriteButton(_ configView: SoundConfigView, completion:((Bool) -> Void)?)
+    
+    func didChangedAlarm(_ configView: SoundConfigView, value: Date)
+    
+    func didChangeFadeOut(_ configView: SoundConfigView, value: FadeValue)
 }
 
 class SoundConfigView: UIView {
@@ -67,36 +71,42 @@ class SoundConfigView: UIView {
         if changed.contains(.alarm) {
             alarmButton.updateUIWith(state: state, changed: changed)
         }
+        if changed.contains(.isFavorites) {
+            favoriteButton.updateUIWith(state: state, changed: changed)
+        }
     }
 
 }
 
 extension SoundConfigView: AlarmButtonViewDelegate {
-    func didTapAlarmButton(_ View: AlarmButtonView) {
-        //
+    func didTapAlarmButton(_ view: AlarmButtonView) {
+        let alert = view.dequeueAlert(.SelectionAlert)
+        delegate?.didTapAlarmButton(self, alert: alert)
     }
     
-    func didChangeAlarm(_ View: AlarmButtonView, value: Date) {
-        //
+    func didChangeAlarm(_ view: AlarmButtonView, value: Date) {
+        delegate?.didChangedAlarm(self, value: value)
     }
-    
-    
 }
 
 extension SoundConfigView: FavoriteButtonViewDelegate {
-    func didTapFavoriteButton(_ view: FavoriteButtonView, fromValue: Bool) {
-        //
+    func didTapFavoriteButton(_ view: FavoriteButtonView, completion: ((Bool) -> Void)?) {
+        delegate?.didTapFavoriteButton(self, completion: completion)
     }
 }
 
 extension SoundConfigView: FadeOutButtonViewDelegate {
+    func willChangeFadeOut(_ view: FadeOutButtonView) {
+        let alert = view.dequeueAlert(.SelectionAlert)
+        delegate?.didTapFadeButton(self, alert: alert)
+    }
+    
     func didTapFadeButton(_ view: FadeOutButtonView) {
-        //
+        let alert = view.dequeueAlert(.MessageAlert)
+        delegate?.didTapFadeButton(self, alert: alert)
     }
     
     func didChangeFadeOut(_ view: FadeOutButtonView, value: FadeValue) {
-        //
+        delegate?.didChangeFadeOut(self, value: value)
     }
-    
-    
 }

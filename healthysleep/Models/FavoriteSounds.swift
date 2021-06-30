@@ -54,6 +54,10 @@ class FavoriteSounds {
         return favoriteSounds.contains(soundName)
     }
     
+    func has(with sound: Sound) -> Bool {
+        return favoriteSounds.contains(sound.name_key)
+    }
+    
     func reload () {
         readData()
     }

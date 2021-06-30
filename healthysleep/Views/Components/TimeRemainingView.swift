@@ -30,7 +30,14 @@ class TimeRemainingView: UIView {
     }
     
     func updateUIWith(state: PlaybackState, changed: [PSField]) {
-        
+        let seconds = state.timeRemaining
+        hmsFrom(seconds: Int(seconds)) { hours, minutes, seconds in
+            let hours = getStringFrom(seconds: hours)
+            let minutes = getStringFrom(seconds: minutes)
+            let seconds = getStringFrom(seconds: seconds)
+
+            self.timeRemaining.text = "Time Remaining \(hours):\(minutes):\(seconds)"
+        }
     }
     
 }

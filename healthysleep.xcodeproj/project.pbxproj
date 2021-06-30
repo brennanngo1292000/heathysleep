@@ -13,6 +13,7 @@
 		0409F0DE268BC14B00505BF0 /* AlarmButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0DD268BC14B00505BF0 /* AlarmButtonView.swift */; };
 		0409F0E0268BC15B00505BF0 /* FadeOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0DF268BC15B00505BF0 /* FadeOutButtonView.swift */; };
 		0409F0E2268BC16E00505BF0 /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0E1268BC16E00505BF0 /* FavoriteButtonView.swift */; };
+		047060AA268C2C6400297445 /* FadeOutPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047060A9268C2C6400297445 /* FadeOutPickerView.swift */; };
 		0487AACA268B0A970085080D /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487AAC9268B0A970085080D /* TimeInterval.swift */; };
 		048F67E326881DDA0033A30F /* BackgroundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F67C326881DDA0033A30F /* BackgroundHandler.swift */; };
 		048F67E426881DDA0033A30F /* URL+Offline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F67C426881DDA0033A30F /* URL+Offline.swift */; };
@@ -238,6 +239,7 @@
 		0409F0DD268BC14B00505BF0 /* AlarmButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmButtonView.swift; sourceTree = "<group>"; };
 		0409F0DF268BC15B00505BF0 /* FadeOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutButtonView.swift; sourceTree = "<group>"; };
 		0409F0E1268BC16E00505BF0 /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
+		047060A9268C2C6400297445 /* FadeOutPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutPickerView.swift; sourceTree = "<group>"; };
 		0487AAC9268B0A970085080D /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		048F67C326881DDA0033A30F /* BackgroundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundHandler.swift; sourceTree = "<group>"; };
 		048F67C426881DDA0033A30F /* URL+Offline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Offline.swift"; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				0409F0DF268BC15B00505BF0 /* FadeOutButtonView.swift */,
 				0409F0E1268BC16E00505BF0 /* FavoriteButtonView.swift */,
 				048F682426890B8D0033A30F /* PlayAnimationView.swift */,
+				047060A9268C2C6400297445 /* FadeOutPickerView.swift */,
 				048F6816268873730033A30F /* SoundControlView.swift */,
 				048F68202688E08D0033A30F /* DurationSliderView.swift */,
 				0409F0D7268BB54800505BF0 /* PlayStopButtonView.swift */,
@@ -1295,6 +1298,7 @@
 				04C4CA562685070D00266932 /* AppDelegate.swift in Sources */,
 				04C4CD27268510C800266932 /* Category.swift in Sources */,
 				048F68062688239C0033A30F /* PlistReader.swift in Sources */,
+				047060AA268C2C6400297445 /* FadeOutPickerView.swift in Sources */,
 				04C4CA582685070D00266932 /* SceneDelegate.swift in Sources */,
 				048F67F326881DDA0033A30F /* AudioPlayer+AudioItemEvent.swift in Sources */,
 				048F67E626881DDA0033A30F /* CMTime+TimeIntervalValue.swift in Sources */,

@@ -72,7 +72,13 @@ class PlayStopButtonView: UIView {
     }
     
     func updateUIWith(state: PlaybackState, changed: [PSField]) {
-        
+        if state.state.isPlaying && !state.state.isPaused{
+            playButton.backgroundColor = .systemPink
+            stopButton.backgroundColor = .red
+        } else {
+            playButton.backgroundColor = .red
+            stopButton.backgroundColor = .systemPink
+        }
     }
     
     @objc func didTapPlay () {

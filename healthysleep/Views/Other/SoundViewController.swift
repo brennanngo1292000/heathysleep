@@ -18,7 +18,7 @@ class SoundViewController: UIViewController {
     init(viewModel: SoundViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        updateUIWith(state: viewModel.state, changed: [.duration, .fadeOut, .percentage, .progressionTo, .sound, .state])
+        updateUIWith(state: viewModel.state, changed: [.duration, .fadeOut, .percentage, .progressionTo, .sound, .state, .isFavorites])
         viewModel.on(self, selector: #selector(updateUI))
     }
     
@@ -60,47 +60,24 @@ class SoundViewController: UIViewController {
 }
 
 extension SoundViewController: SoundConfigViewDelegate {
-    
-    func didTapAlarmButton(_ configView: SoundConfigView) {
-        let alertView = UIAlertController(title: "Select", message: "", preferredStyle: .alert)
-        let pickerView = UIDatePicker(frame: CGRect(x: 0, y: 0, width: alertView.view.width, height: 100))
-        pickerView.datePickerMode = .time
-        alertView.view.contentMode = .center
-        alertView.view.addSubview(pickerView)
-        alertView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alertView, animated: true, completion: {
-            pickerView.frame.size.width = alertView.view.frame.size.width
-            
-        })
+    func didChangedAlarm(_ configView: SoundConfigView, value: Date) {
+        viewModel?.changeAlarm(value: value, completion: nil)
     }
     
-    func didTapFadeButton(_ configView: SoundConfigView) {
-        let alertView = UIAlertController(
-            title: "Fade Out",
-            message: "The Fade Out feature helps baby gently drift off to sleep. Customize to suit baby's needs. Your sound will fade out from full volume to 0 over a gradual, custom period of time without waking baby up.",
-            preferredStyle: .alert
-        )
-        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-            let alertView = UIAlertController(
-                title: "Fade Out",
-                message: "",
-                preferredStyle: .alert
-            )
-            let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
-            alertView.view.addSubview(pickerView)
-            alertView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
-            self.present(alertView, animated: true, completion: nil)
-        }))
-        
-        self.present(alertView, animated: true, completion: nil)
-            
+    func didChangeFadeOut(_ configView: SoundConfigView, value: FadeValue) {
+        viewModel?.changeFadeOut(value: value, completion: nil)
     }
     
-    func didTapFavoriteButton(_ configView: SoundConfigView, from: Bool) {
-        viewModel?.toggleFavorite(from: from, completion: nil)
+    func didTapAlarmButton(_ configView: SoundConfigView, alert: UIAlertController) {
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func didTapFadeButton(_ configView: SoundConfigView, alert: UIAlertController) {
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func didTapFavoriteButton(_ configView: SoundConfigView, completion: ((Bool) -> Void)?) {
+        viewModel?.toggleFavorite(completion: completion)
     }
     
 }
