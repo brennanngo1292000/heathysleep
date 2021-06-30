@@ -38,11 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     override func remoteControlReceived(with event: UIEvent?) {
-        if let event = event {
-            if let player = PlaybackPresenter.shared.player {
-                player.remoteControlReceived(with: event)
-            }
-        }
+        PlaybackPresenter.shared.remoteControlReceived(with: event)
     }
 
 

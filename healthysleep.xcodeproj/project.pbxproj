@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0409F0D8268BB54800505BF0 /* PlayStopButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0D7268BB54800505BF0 /* PlayStopButtonView.swift */; };
+		0409F0DA268BB55E00505BF0 /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0D9268BB55E00505BF0 /* VolumeSliderView.swift */; };
+		0409F0DC268BB59200505BF0 /* TimeRemainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0DB268BB59200505BF0 /* TimeRemainingView.swift */; };
+		0409F0DE268BC14B00505BF0 /* AlarmButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0DD268BC14B00505BF0 /* AlarmButtonView.swift */; };
+		0409F0E0268BC15B00505BF0 /* FadeOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0DF268BC15B00505BF0 /* FadeOutButtonView.swift */; };
+		0409F0E2268BC16E00505BF0 /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409F0E1268BC16E00505BF0 /* FavoriteButtonView.swift */; };
 		0487AACA268B0A970085080D /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487AAC9268B0A970085080D /* TimeInterval.swift */; };
 		048F67E326881DDA0033A30F /* BackgroundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F67C326881DDA0033A30F /* BackgroundHandler.swift */; };
 		048F67E426881DDA0033A30F /* URL+Offline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F67C426881DDA0033A30F /* URL+Offline.swift */; };
@@ -226,6 +232,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0409F0D7268BB54800505BF0 /* PlayStopButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStopButtonView.swift; sourceTree = "<group>"; };
+		0409F0D9268BB55E00505BF0 /* VolumeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSliderView.swift; sourceTree = "<group>"; };
+		0409F0DB268BB59200505BF0 /* TimeRemainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRemainingView.swift; sourceTree = "<group>"; };
+		0409F0DD268BC14B00505BF0 /* AlarmButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmButtonView.swift; sourceTree = "<group>"; };
+		0409F0DF268BC15B00505BF0 /* FadeOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutButtonView.swift; sourceTree = "<group>"; };
+		0409F0E1268BC16E00505BF0 /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
 		0487AAC9268B0A970085080D /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		048F67C326881DDA0033A30F /* BackgroundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundHandler.swift; sourceTree = "<group>"; };
 		048F67C426881DDA0033A30F /* URL+Offline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Offline.swift"; sourceTree = "<group>"; };
@@ -545,9 +557,15 @@
 			children = (
 				04C4CD32268515FE00266932 /* CategoryViewCell.swift */,
 				048F6814268873620033A30F /* SoundConfigView.swift */,
+				0409F0DD268BC14B00505BF0 /* AlarmButtonView.swift */,
+				0409F0DF268BC15B00505BF0 /* FadeOutButtonView.swift */,
+				0409F0E1268BC16E00505BF0 /* FavoriteButtonView.swift */,
 				048F682426890B8D0033A30F /* PlayAnimationView.swift */,
 				048F6816268873730033A30F /* SoundControlView.swift */,
 				048F68202688E08D0033A30F /* DurationSliderView.swift */,
+				0409F0D7268BB54800505BF0 /* PlayStopButtonView.swift */,
+				0409F0D9268BB55E00505BF0 /* VolumeSliderView.swift */,
+				0409F0DB268BB59200505BF0 /* TimeRemainingView.swift */,
 				04C4CD4126859B4900266932 /* SoundViewCell.swift */,
 			);
 			path = Components;
@@ -1255,12 +1273,14 @@
 				048F681F2688DA320033A30F /* MoreViewModel.swift in Sources */,
 				048F67FE26881DDA0033A30F /* AudioPlayerState.swift in Sources */,
 				048F680A268839C00033A30F /* HomeViewModel.swift in Sources */,
+				0409F0DE268BC14B00505BF0 /* AlarmButtonView.swift in Sources */,
 				04C4CD402685947100266932 /* String.swift in Sources */,
 				04C4CA8D2685086600266932 /* TabBarViewController.swift in Sources */,
 				04C4CD3E26857DA800266932 /* FadeValue.swift in Sources */,
 				048F67E526881DDA0033A30F /* MPNowPlayingInfoCenter+AudioItem.swift in Sources */,
 				0487AACA268B0A970085080D /* TimeInterval.swift in Sources */,
 				04C4CD462685A4A900266932 /* SoundViewController.swift in Sources */,
+				0409F0E2268BC16E00505BF0 /* FavoriteButtonView.swift in Sources */,
 				048F680E268840DF0033A30F /* SoundViewModel.swift in Sources */,
 				048F681026886C100033A30F /* WhitenoiseData.swift in Sources */,
 				048F6823268904C20033A30F /* utils.swift in Sources */,
@@ -1280,13 +1300,16 @@
 				048F67E626881DDA0033A30F /* CMTime+TimeIntervalValue.swift in Sources */,
 				048F68212688E08D0033A30F /* DurationSliderView.swift in Sources */,
 				04C4CA8F268508D300266932 /* HomeViewController.swift in Sources */,
+				0409F0E0268BC15B00505BF0 /* FadeOutButtonView.swift in Sources */,
 				048F67E926881DDA0033A30F /* AudioItem.swift in Sources */,
 				04C4CD382685173700266932 /* UIView.swift in Sources */,
+				0409F0D8268BB54800505BF0 /* PlayStopButtonView.swift in Sources */,
 				048F680C26883B9F0033A30F /* SoundCollectionViewModel.swift in Sources */,
 				048F67F126881DDA0033A30F /* AudioPlayer.swift in Sources */,
 				04C4CD23268510AC00266932 /* Sound.swift in Sources */,
 				048F67E826881DDA0033A30F /* AudioItemQueue.swift in Sources */,
 				048F67EE26881DDA0033A30F /* PlayerEventProducer.swift in Sources */,
+				0409F0DC268BB59200505BF0 /* TimeRemainingView.swift in Sources */,
 				048F67F926881DDA0033A30F /* AudioPlayer+Control.swift in Sources */,
 				048F67EF26881DDA0033A30F /* QualityAdjustmentEventProducer.swift in Sources */,
 				048F681D26889ED40033A30F /* FavoritesViewModel.swift in Sources */,
@@ -1295,6 +1318,7 @@
 				048F681B268896790033A30F /* FavoriteSounds.swift in Sources */,
 				04C4CD4226859B4900266932 /* SoundViewCell.swift in Sources */,
 				048F67F826881DDA0033A30F /* AudioPlayer+NetworkEvent.swift in Sources */,
+				0409F0DA268BB55E00505BF0 /* VolumeSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

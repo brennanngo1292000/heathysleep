@@ -18,6 +18,8 @@ class SoundViewController: UIViewController {
     init(viewModel: SoundViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        updateUIWith(state: viewModel.state, changed: [.duration, .fadeOut, .percentage, .progressionTo, .sound, .state])
+        viewModel.on(self, selector: #selector(updateUI))
     }
     
     required init?(coder: NSCoder) {
@@ -29,14 +31,24 @@ class SoundViewController: UIViewController {
         configureUI()
     }
     
+    @objc func updateUI(_ notification: Notification) {
+        guard let state = notification.userInfo?["state"] as? PlaybackState, let changed = notification.userInfo?["changed"] as? [PSField] else {
+            return
+        }
+       updateUIWith(state: state, changed: changed)
+    }
+    
+    func updateUIWith(state: PlaybackState, changed: [PSField]) {
+        soundControlView.updateUIWith(state: state, changed: changed)
+        soundConfigView.updateUIWith(state: state, changed: changed)
+    }
+    
     private func configureUI() {
         view.backgroundColor = .systemBackground
         view.addSubview(soundConfigView)
         view.addSubview(soundControlView)
         soundConfigView.delegate = self
-        soundConfigView.dataSource = self.viewModel
         soundControlView.delegate = self
-        soundControlView.dataSource = self.viewModel
     }
     
     override func viewDidLayoutSubviews() {
@@ -88,48 +100,25 @@ extension SoundViewController: SoundConfigViewDelegate {
     }
     
     func didTapFavoriteButton(_ configView: SoundConfigView, from: Bool) {
-        viewModel?.toggleFavorite(from: from, completion: { result in
-            DispatchQueue.main.async {
-                if result {
-                    configView.reloadData()
-                }
-            }
-        })
+        viewModel?.toggleFavorite(from: from, completion: nil)
     }
-    
-}
-
-extension SoundViewController: PlaybackPresenterDelegate {
-    func audioPlayer(_ audioPlayer: AudioPlayer, didChangeStateFrom from: AudioPlayerState, to state: AudioPlayerState) {
-        print(from, state)
-    }
-    
-    func audioPlayer(_ audioPlayer: AudioPlayer, didFindDuration duration: TimeInterval, for item: AudioItem) {
-//        print(duration)
-    }
-    
-    func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float) {
-        soundControlView.reloadData()
-    }
-    
     
 }
 
 extension SoundViewController: SoundControlViewDelegate {
-    
-    func didChangeDuration(_ controllView: SoundControlView, value: DurationValue, completion: @escaping (Bool) -> Void) {
-        viewModel?.changeDuration(value: value, completion:completion)
-    }
-    
-    func didTapPlay(_ controllView: SoundControlView, completion: @escaping (Bool) -> Void) {
+    func didTapPlay(_ controllView: SoundControlView, completion: ((Bool) -> Void)?) {
         viewModel?.play(completion: completion)
     }
     
-    func didTapStop(_ controllView: SoundControlView, completion: @escaping (Bool) -> Void) {
+    func didTapStop(_ controllView: SoundControlView, completion: ((Bool) -> Void)?) {
         viewModel?.pause(completion: completion)
     }
     
-    func didChangeVolume(_ controllView: SoundControlView, value: Float, completion: @escaping (Bool) -> Void) {
+    func didChangeDuration(_ controllView: SoundControlView, value: DurationValue, completion: ((Bool) -> Void)?) {
+        viewModel?.changeDuration(value: value, completion:completion)
+    }
+    
+    func didChangeVolume(_ controllView: SoundControlView, value: Float, completion: ((Bool) -> Void)?) {
         viewModel?.changeVolume(value: value, completion: completion)
     }
 }

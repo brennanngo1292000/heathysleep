@@ -9,7 +9,7 @@ import UIKit
 
 
 protocol DurationSliderViewDelegate {
-    func didChangeDuration (_ durationSliderView: DurationSliderView, value: DurationValue)
+    func didChangeDuration (_ durationSliderView: DurationSliderView, value: DurationValue, completion: ((Bool) -> Void)?)
 }
 
 class DurationSliderView: UIView {
@@ -78,7 +78,11 @@ class DurationSliderView: UIView {
         DispatchQueue.main.async {
             self.value.text = durationValue.display
         }
-        self.delegate?.didChangeDuration(self, value: durationValue)
+        self.delegate?.didChangeDuration(self, value: durationValue, completion: nil)
+    }
+    
+    func updateUIWith(state: PlaybackState, changed: [PSField]) {
+        
     }
 
 }

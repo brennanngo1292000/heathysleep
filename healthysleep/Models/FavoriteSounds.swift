@@ -25,27 +25,27 @@ class FavoriteSounds {
         favoriteSounds = favorites
     }
     
-    func add(nameKey: String, completion: @escaping (Bool) -> Void) {
+    func add(nameKey: String, completion: ((Bool) -> Void)?) {
         if favoriteSounds.contains(nameKey) {
-            completion(true)
+            completion?(true)
             return
         } else {
             favoriteSounds.append(nameKey)
             UserDefaults.standard.setValue(favoriteSounds, forKey: cacheName)
-            completion(true)
+            completion?(true)
             return
         }
         
     }
     
-    func delete(nameKey: String, completion: @escaping (Bool) -> Void) {
+    func delete(nameKey: String, completion: ((Bool) -> Void)?) {
         if let index = favoriteSounds.firstIndex(of: nameKey) {
             favoriteSounds.remove(at: index)
             UserDefaults.standard.setValue(favoriteSounds, forKey: cacheName)
-            completion(true)
+            completion?(true)
             return
         } else {
-            completion(true)
+            completion?(true)
             return
         }
     }

@@ -8,15 +8,9 @@
 import UIKit
 import Lottie
 
-protocol PlayAnimationViewDataSource {
-    var isPlaying: Bool { get }
-    var isPaused: Bool { get }
-    var isStoped: Bool { get }
-}
-
 class PlayAnimationView: UIView {
     
-    var dataSource: PlayAnimationViewDataSource?
+    private var state: PlaybackState?
     
     private var animationView: AnimationView = {
         let animationView = AnimationView(name: "playing_anim_st")
@@ -27,6 +21,7 @@ class PlayAnimationView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(animationView)
+        PlaybackPresenter.shared.on(self, selector: #selector(onState), playbackNotfication: .State)
     }
     
     required init?(coder: NSCoder) {
@@ -38,8 +33,43 @@ class PlayAnimationView: UIView {
         backgroundColor = .red
         animationView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         animationView.center = self.center
-        animationView.play()
         animationView.loopMode = .loop
+        animationView.isHidden = true
     }
+    
+    @objc private func onState(_ notfication: Notification) {
+        guard let state = notfication.userInfo?["state"] as? PlaybackState else {
+            return
+        }
+        self.state = state
+        updateUI()
+    }
+    
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        updateUI()
+    }
+    
+    private func updateUI() {
+        guard let state = state else {
+            return
+        }
+        switch state.state {
+        case .buffering:
+            animationView.isHidden = false
+        case .paused:
+            animationView.stop()
+        case .playing:
+            animationView.play()
+        case .stopped:
+            animationView.isHidden = true
+        case .waitingForConnection:
+            animationView.isHidden = true
+        case .failed(_):
+            animationView.isHidden = true
+        }
+    }
+    
+    
     
 }

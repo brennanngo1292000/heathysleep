@@ -85,7 +85,6 @@ extension SoundCollectionViewController: UICollectionViewDelegate, UICollectionV
         }
         let vc = SoundViewController(viewModel: .init(sound:sound))
         vc.navigationItem.largeTitleDisplayMode = .never
-        PlaybackPresenter.shared.resgister(vc)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

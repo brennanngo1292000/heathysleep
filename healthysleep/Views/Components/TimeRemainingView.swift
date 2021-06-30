@@ -2,19 +2,12 @@
 //  TimeRemainingView.swift
 //  healthysleep
 //
-//  Created by Mac on 29/06/2021.
+//  Created by Mac on 30/06/2021.
 //
 
 import UIKit
 
-protocol  TimeRemainingViewDataSource {
-    
-}
-
 class TimeRemainingView: UIView {
-
-    var dataSource: SoundControlViewDataSource?
-    
     private let timeRemaining: UILabel = {
         let timeRemaining = UILabel()
         timeRemaining.text = "Time Remaining 0:00:30"
@@ -33,10 +26,11 @@ class TimeRemainingView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        timeRemaining.frame = CGRect(x: 0, y: 0, width: width, height: height )
+        timeRemaining.frame = CGRect(x: 0, y: 0, width: width, height: height)
     }
     
-    func reloadData() {
-        if let
+    func updateUIWith(state: PlaybackState, changed: [PSField]) {
+        
     }
+    
 }
